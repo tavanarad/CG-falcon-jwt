@@ -41,7 +41,7 @@ class Log:
                 stream_handler.setFormatter(self._format)
             logger.addHandler(stream_handler)
 
-        name_file = '/main-' + date.today().__str__() + '.log'
+        name_file = '/jwt-middleware-' + date.today().__str__() + '.log'
 
         file_handler = logging.FileHandler(self._path + name_file)  # path + name of file
         formatter = logging.Formatter(self._format)

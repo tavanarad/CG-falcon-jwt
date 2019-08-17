@@ -9,7 +9,7 @@ config = {"secret": "123",
 
 
 class UserResource(object):
-    def on_get(self, req, resp):
+    def on_get(self, req, resp, **kwargs):
         resp.body = 'get'
 
     def on_post(self, req, resp, jwt_claims):
