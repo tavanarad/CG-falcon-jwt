@@ -1,0 +1,1 @@
+from cheeta_jwt.exception.validator_exception import ValidatorException

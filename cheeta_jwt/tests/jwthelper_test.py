@@ -1,12 +1,4 @@
 import falcon
-from falcon import testing
-import pytest
-from cheeta_jwt.tests import api
-
-
-@pytest.fixture
-def client():
-    return testing.TestClient(api)
 
 
 def test_decode_jwt(client):
@@ -31,4 +23,3 @@ def test_decode_jwt(client):
     result = client.simulate_put('/UserResource', body={}, json=headers)
     assert result.status == falcon.HTTP_401
     assert result.body == '1234'
-

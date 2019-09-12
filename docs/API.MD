@@ -79,3 +79,7 @@ If the token is valid, it should pass the playload of the token as named paramet
         4. exempt_all_methods
         
             It is an array of method's name that should not be checked for all resources.
+            
+        5. validators
+        
+            It's an array of callable methods for validate payload after decode (NOTE: deepcopy of payload will pass to validators so validators can't modify payload)

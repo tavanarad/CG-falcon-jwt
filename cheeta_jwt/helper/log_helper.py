@@ -15,7 +15,7 @@ class Log:
     def __init__(self, module_name,
                  _format=default_format,
                  path=default_path,
-                 level=logging.CRITICAL,
+                 level=logging.ERROR,
                  stream=False,
                  stream_format=False
                  ):
