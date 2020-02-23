@@ -13,11 +13,11 @@ class UserResource(object):
         resp.body = 'get'
 
     def on_post(self, req, resp, jwt_claims):
-        resp.body = jwt_claims['user']
+        resp.body = jwt_claims['user'].__str__()
         pass
 
     def on_put(self, req, resp, jwt_claims):
-        resp.body = jwt_claims['user']
+        resp.body = jwt_claims['user'].__str__()
         pass
 
 
