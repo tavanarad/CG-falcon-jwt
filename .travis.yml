@@ -1,0 +1,20 @@
+language: python
+python:
+  - "2.7"
+  - "3.8"
+
+install:
+  - pip install -U pip pep517 twine
+  - pip install -r requirements.txt
+
+script:
+  - rm -rf build dist
+  - python -m pep517.build .
+
+deploy:
+  provider: pypi
+  user: __token__
+  password:
+    secure: $token_secret
+  on:
+    branch: production
