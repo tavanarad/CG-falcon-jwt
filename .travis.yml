@@ -9,7 +9,6 @@ install:
 script:
   - pytest
   - rm -rf build dist
-  - python -m pep517.build .
 
 deploy:
   provider: pypi
