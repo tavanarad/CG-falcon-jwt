@@ -12,6 +12,7 @@ script:
 
 deploy:
   provider: pypi
+  distributions: "sdist bdist_wheel"
   user: "__token__"
   password: $TOKEN_SECRET
   on:
