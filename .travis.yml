@@ -13,7 +13,6 @@ script:
 deploy:
   provider: pypi
   user: "__token__"
-  password:
-    secure: $token_secret
+  password: $TOKEN_SECRET
   on:
     branch: production
